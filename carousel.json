@@ -1,0 +1,54 @@
+[
+     {
+        "title" : "Carousel Thumb",
+        "type"  : "thumb",
+        "Items" : [
+                   {
+                        "title"  : "La Playa",
+                        "URL"    : "",
+                        "video"  : ""
+                   },
+                   {
+                       "title"  : "Peligro en Bangkook",
+                       "URL"    : "",
+                       "video"  : ""
+                   },
+                   {
+                       "title"  : "Todas contra John",
+                       "URL"    : "",
+                       "video"  : ""
+                   },
+                   {
+                       "title"  : "Qusiera ser millonario",
+                       "URL"    : "",
+                       "video"  : ""
+                   }
+            ]
+     },
+     {
+         "title" : "Carousel Thumb",
+         "type"  : "poster",
+         "Items" : [
+                    {
+                        "title"  : "La Playa",
+                        "URL"    : "",
+                        "video"  : ""
+                    },
+                    {
+                    "title"  : "Peligro en Bangkook",
+                    "URL"    : "",
+                    "video"  : ""
+                    },
+                    {
+                    "title"  : "Todas contra John",
+                    "URL"    : "",
+                    "video"  : ""
+                    },
+                    {
+                    "title"  : "Qusiera ser millonario",
+                    "URL"    : "",
+                    "video"  : ""
+                    }
+            ]
+     }
+]
