@@ -8,6 +8,11 @@
 
 import UIKit
 
+enum CarouselCollectionCellType: String {
+    case thumb = "thumb"
+    case poster = "poster"
+}
+
 final class CarouselTableCell: UITableViewCell {
     
     // MARK: - Outlets -
@@ -15,16 +20,21 @@ final class CarouselTableCell: UITableViewCell {
     
     // MARK: - Attributes -
     var carousel: Carousel!
+    var collectionCellType: CarouselCollectionCellType!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         
         collectionView.dataSource = self
         collectionView.delegate = self
+        collectionView.registerUICollectionViewCell(CarouselThumbCollectionCell.self)
+        collectionView.registerUICollectionViewCell(CarouselPosterCollectionCell.self)
     }
     
     func configureWithCarousel(carousel: Carousel) {
         self.carousel = carousel
+        
+        
     }
 }
 
@@ -35,6 +45,19 @@ extension CarouselTableCell: UICollectionViewDataSource, UICollectionViewDelegat
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        return UICollectionViewCell()
+        
+        if carousel.type == CarouselCollectionCellType.poster.rawValue {
+            // Poster
+            let cell = collectionView.dequeueReusableCellUICollectionViewCell(forIndexPath: indexPath) as CarouselPosterCollectionCell
+            cell.backgroundColor = UIColor.blue
+            return cell
+            
+        } else {
+            // Thumb
+            let cell = collectionView.dequeueReusableCellUICollectionViewCell(forIndexPath: indexPath) as CarouselPosterCollectionCell
+            cell.backgroundColor = UIColor.red
+            return cell
+            
+        }
     }
 }

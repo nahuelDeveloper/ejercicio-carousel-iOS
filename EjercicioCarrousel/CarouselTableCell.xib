@@ -37,7 +37,7 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
-                <outlet property="collectionView" destination="I6A-ve-jtC" id="Dy5-vC-64P"/>
+                <outlet property="collectionView" destination="I6A-ve-jtC" id="hMd-3E-YiY"/>
             </connections>
             <point key="canvasLocation" x="-54.5" y="-124"/>
         </tableViewCell>

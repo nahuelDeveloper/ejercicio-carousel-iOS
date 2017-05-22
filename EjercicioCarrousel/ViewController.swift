@@ -57,7 +57,9 @@ class ViewController: UIViewController {
             print("Invalid JSON")
         }
         
-        print("Tengo \(carousels.count) carousels")
+        for carousel in carousels {
+            print("Tengo \(carousel.items.count) items en el carousel")
+        }
     }
 
 }

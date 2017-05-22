@@ -22,3 +22,11 @@ extension Reusable where Self: UITableViewCell  {
 
 //3 conforming to protocol
 extension UITableViewCell: Reusable {}
+
+extension Reusable where Self: UICollectionViewCell  {
+    static var reuseIdentifier: String {
+        return String(describing: self)
+    }
+}
+
+extension UICollectionViewCell: Reusable {}
