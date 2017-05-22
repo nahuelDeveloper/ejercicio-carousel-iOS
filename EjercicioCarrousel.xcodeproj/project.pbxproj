@@ -15,6 +15,10 @@
 		7F8A7EA71ED30E4E003882E8 /* carousel.json in Resources */ = {isa = PBXBuildFile; fileRef = 7F8A7EA61ED30E4E003882E8 /* carousel.json */; };
 		7F8A7EAA1ED310BE003882E8 /* Carousel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F8A7EA91ED310BE003882E8 /* Carousel.swift */; };
 		7F8A7EAC1ED31135003882E8 /* CarouselItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F8A7EAB1ED31135003882E8 /* CarouselItem.swift */; };
+		7F8A7EAE1ED31B3E003882E8 /* CarouselTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F8A7EAD1ED31B3E003882E8 /* CarouselTableCell.xib */; };
+		7F8A7EB01ED31BF8003882E8 /* CarouselTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F8A7EAF1ED31BF8003882E8 /* CarouselTableCell.swift */; };
+		7F8A7EB41ED31CB8003882E8 /* UITableViewCell+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F8A7EB31ED31CB8003882E8 /* UITableViewCell+Extension.swift */; };
+		7F8A7EB61ED31DB7003882E8 /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F8A7EB51ED31DB7003882E8 /* UITableView+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +32,10 @@
 		7F8A7EA61ED30E4E003882E8 /* carousel.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = carousel.json; sourceTree = "<group>"; };
 		7F8A7EA91ED310BE003882E8 /* Carousel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Carousel.swift; sourceTree = "<group>"; };
 		7F8A7EAB1ED31135003882E8 /* CarouselItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarouselItem.swift; sourceTree = "<group>"; };
+		7F8A7EAD1ED31B3E003882E8 /* CarouselTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CarouselTableCell.xib; sourceTree = "<group>"; };
+		7F8A7EAF1ED31BF8003882E8 /* CarouselTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarouselTableCell.swift; sourceTree = "<group>"; };
+		7F8A7EB31ED31CB8003882E8 /* UITableViewCell+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Extension.swift"; sourceTree = "<group>"; };
+		7F8A7EB51ED31DB7003882E8 /* UITableView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +69,7 @@
 		7F8A7E931ED305C0003882E8 /* EjercicioCarrousel */ = {
 			isa = PBXGroup;
 			children = (
+				7F8A7EB11ED31C23003882E8 /* Utils */,
 				7F8A7EA81ED310A3003882E8 /* Model */,
 				7F8A7E941ED305C0003882E8 /* AppDelegate.swift */,
 				7F8A7E961ED305C0003882E8 /* ViewController.swift */,
@@ -68,6 +77,8 @@
 				7F8A7E9B1ED305C0003882E8 /* Assets.xcassets */,
 				7F8A7E9D1ED305C0003882E8 /* LaunchScreen.storyboard */,
 				7F8A7EA01ED305C0003882E8 /* Info.plist */,
+				7F8A7EAD1ED31B3E003882E8 /* CarouselTableCell.xib */,
+				7F8A7EAF1ED31BF8003882E8 /* CarouselTableCell.swift */,
 			);
 			path = EjercicioCarrousel;
 			sourceTree = "<group>";
@@ -79,6 +90,23 @@
 				7F8A7EAB1ED31135003882E8 /* CarouselItem.swift */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		7F8A7EB11ED31C23003882E8 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				7F8A7EB21ED31C30003882E8 /* Extensions */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
+		7F8A7EB21ED31C30003882E8 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				7F8A7EB31ED31CB8003882E8 /* UITableViewCell+Extension.swift */,
+				7F8A7EB51ED31DB7003882E8 /* UITableView+Extension.swift */,
+			);
+			name = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,6 +171,7 @@
 			files = (
 				7F8A7E9F1ED305C0003882E8 /* LaunchScreen.storyboard in Resources */,
 				7F8A7E9C1ED305C0003882E8 /* Assets.xcassets in Resources */,
+				7F8A7EAE1ED31B3E003882E8 /* CarouselTableCell.xib in Resources */,
 				7F8A7E9A1ED305C0003882E8 /* Main.storyboard in Resources */,
 				7F8A7EA71ED30E4E003882E8 /* carousel.json in Resources */,
 			);
@@ -155,6 +184,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F8A7EB01ED31BF8003882E8 /* CarouselTableCell.swift in Sources */,
+				7F8A7EB41ED31CB8003882E8 /* UITableViewCell+Extension.swift in Sources */,
+				7F8A7EB61ED31DB7003882E8 /* UITableView+Extension.swift in Sources */,
 				7F8A7EAA1ED310BE003882E8 /* Carousel.swift in Sources */,
 				7F8A7E971ED305C0003882E8 /* ViewController.swift in Sources */,
 				7F8A7EAC1ED31135003882E8 /* CarouselItem.swift in Sources */,
