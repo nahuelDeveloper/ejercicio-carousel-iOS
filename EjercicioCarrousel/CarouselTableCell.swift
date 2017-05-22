@@ -33,8 +33,6 @@ final class CarouselTableCell: UITableViewCell {
     
     func configureWithCarousel(carousel: Carousel) {
         self.carousel = carousel
-        
-        
     }
 }
 
@@ -49,15 +47,26 @@ extension CarouselTableCell: UICollectionViewDataSource, UICollectionViewDelegat
         if carousel.type == CarouselCollectionCellType.poster.rawValue {
             // Poster
             let cell = collectionView.dequeueReusableCellUICollectionViewCell(forIndexPath: indexPath) as CarouselPosterCollectionCell
-            cell.backgroundColor = UIColor.blue
+            cell.configure(with: carousel.items[indexPath.row])
             return cell
             
         } else {
             // Thumb
             let cell = collectionView.dequeueReusableCellUICollectionViewCell(forIndexPath: indexPath) as CarouselPosterCollectionCell
-            cell.backgroundColor = UIColor.red
+            cell.configure(with: carousel.items[indexPath.row])
             return cell
-            
         }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        if carousel.type == CarouselCollectionCellType.poster.rawValue {
+            return CGSize(width: 150.0, height: 200.0)
+        } else {
+            return CGSize(width: 200.0, height: 90.0)
+        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsetsMake(2.5, 2.5, 2.5, 2.5)
     }
 }

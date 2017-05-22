@@ -5,23 +5,23 @@
         "Items" : [
                    {
                         "title"  : "La Playa",
-                        "URL"    : "",
-                        "video"  : ""
+                        "URL"    : "http://placeimg.com/640/480/any",
+                        "video"  : "http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4"
                    },
                    {
                        "title"  : "Peligro en Bangkook",
-                       "URL"    : "",
-                       "video"  : ""
+                       "URL"    : "http://placeimg.com/640/480/any",
+                       "video"  : "http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4"
                    },
                    {
                        "title"  : "Todas contra John",
-                       "URL"    : "",
+                       "URL"    : "http://placeimg.com/640/480/any",
                        "video"  : ""
                    },
                    {
                        "title"  : "Qusiera ser millonario",
-                       "URL"    : "",
-                       "video"  : ""
+                       "URL"    : "http://placeimg.com/640/480/any",
+                       "video"  : "http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4"
                    }
             ]
      },
@@ -31,23 +31,23 @@
          "Items" : [
                     {
                         "title"  : "La Playa",
-                        "URL"    : "",
+                        "URL"    : "http://placeimg.com/320/480/any",
+                        "video"  : "http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4"
+                    },
+                    {
+                        "title"  : "Peligro en Bangkook",
+                        "URL"    : "http://placeimg.com/320/480/any",
                         "video"  : ""
                     },
                     {
-                    "title"  : "Peligro en Bangkook",
-                    "URL"    : "",
-                    "video"  : ""
+                        "title"  : "Todas contra John",
+                        "URL"    : "http://placeimg.com/320/480/any",
+                        "video"  : "http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4"
                     },
                     {
-                    "title"  : "Todas contra John",
-                    "URL"    : "",
-                    "video"  : ""
-                    },
-                    {
-                    "title"  : "Qusiera ser millonario",
-                    "URL"    : "",
-                    "video"  : ""
+                        "title"  : "Qusiera ser millonario",
+                        "URL"    : "http://placeimg.com/320/480/any",
+                        "video"  : "http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4"
                     }
             ]
      }

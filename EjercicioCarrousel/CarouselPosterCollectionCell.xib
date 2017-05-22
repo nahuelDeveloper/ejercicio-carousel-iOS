@@ -17,8 +17,33 @@
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                 <rect key="frame" x="0.0" y="0.0" width="150" height="200"/>
                 <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MUs-df-kdj" userLabel="Poster Image View">
+                        <rect key="frame" x="0.0" y="0.0" width="150" height="200"/>
+                        <color key="backgroundColor" red="0.1960784314" green="0.47843137250000001" blue="0.99607843139999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="6" translatesAutoresizingMaskIntoConstraints="NO" id="CHu-Ie-vg2" userLabel="Title Label">
+                        <rect key="frame" x="0.0" y="182" width="150" height="18"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
             </view>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="CHu-Ie-vg2" secondAttribute="bottom" id="2da-mk-hyn"/>
+                <constraint firstItem="CHu-Ie-vg2" firstAttribute="leading" secondItem="948-BJ-D47" secondAttribute="leading" id="E3s-cS-BmC"/>
+                <constraint firstItem="MUs-df-kdj" firstAttribute="top" secondItem="948-BJ-D47" secondAttribute="top" id="VPS-JI-N7o"/>
+                <constraint firstItem="MUs-df-kdj" firstAttribute="leading" secondItem="948-BJ-D47" secondAttribute="leading" id="i1b-w2-Te2"/>
+                <constraint firstAttribute="trailing" secondItem="MUs-df-kdj" secondAttribute="trailing" id="jRu-qa-6Xc"/>
+                <constraint firstAttribute="bottom" secondItem="MUs-df-kdj" secondAttribute="bottom" id="l6f-3b-iNM"/>
+                <constraint firstAttribute="trailing" secondItem="CHu-Ie-vg2" secondAttribute="trailing" id="s8g-Qo-MC4"/>
+            </constraints>
             <size key="customSize" width="150" height="200"/>
+            <connections>
+                <outlet property="posterImageView" destination="MUs-df-kdj" id="uvg-Bj-GYq"/>
+                <outlet property="titleLabel" destination="CHu-Ie-vg2" id="WSe-MM-ESk"/>
+            </connections>
             <point key="canvasLocation" x="26" y="41"/>
         </collectionViewCell>
     </objects>

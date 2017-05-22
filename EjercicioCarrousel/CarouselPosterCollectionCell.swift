@@ -10,4 +10,11 @@ import UIKit
 
 final class CarouselPosterCollectionCell: UICollectionViewCell {
     
+    @IBOutlet weak var posterImageView: UIImageView!
+    @IBOutlet weak var titleLabel: UILabel!
+    
+    func configure(with carouselItem: CarouselItem) {
+        titleLabel.text = carouselItem.title
+    }
+    
 }

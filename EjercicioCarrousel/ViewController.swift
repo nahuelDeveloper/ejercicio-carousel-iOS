@@ -77,6 +77,12 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 120.0
+        let carousel = carousels[indexPath.row]
+        
+        if carousel.type == CarouselCollectionCellType.poster.rawValue {
+            return 200.0
+        } else {
+            return 100.0
+        }
     }
 }
