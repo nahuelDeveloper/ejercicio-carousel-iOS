@@ -15,6 +15,7 @@ final class CarouselPosterCollectionCell: UICollectionViewCell {
     
     func configure(with carouselItem: CarouselItem) {
         titleLabel.text = carouselItem.title
+        posterImageView.loadImageFromResource(resource: carouselItem.URL)
     }
     
 }
