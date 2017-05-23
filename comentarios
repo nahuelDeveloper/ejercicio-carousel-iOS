@@ -1,0 +1,14 @@
+
+Algunos comentarios sobre el ejercicio realizado, las decisiones de diseño tomadas, y los problemas que encontre:
+
+-   Para realizar el ejercicio decidi utilizar una UITableView como componente principal de la vista, y cada celda de la tabla posee una UICollectionView respectivamente. Esto me da la flexibilidad de poder manejar una cantidad n de carouseles.
+
+-   En cuanto al armado dinámico de los carouseles, lo simulo mediante la utilización del archivo carousel.json. Este archivo emula un posible JSON que podría obtener desde una API cada vez que recargo la pantalla. Al no contar con una API, el armado es estático, ya que debo cerrar la app, modificar dicho archivo manualmente, y volver a correr la app para ver reflejados los cambios. Sin embargo, el modelo de datos esta diseñado pensado en el armado dinámico de los componentes, solo faltaría agregar un componente que maneje el networking y obtenga los datos de la API en vez de localmente. En el caso de contar con el serivcio para obtener el JSON dinámicamente, hubiera elegido Alamofire para manejar la llamada a la API, y ObjectMapper para parsear la respuesta a mi modelo local de datos.
+
+-   Como las celdas de carousel del mismo tipo son todas iguales, y no hay carouseles con celdas de distinto tipo mezcladas, decidi que no era necesario utilizar un UICollectionViewFlowLayout custom.
+
+-   En cuanto a la pantalla principal, encontre un crash cuando cambiaba de Portrait a Landscape, un index out of range. Investigando en internet descubrí que el problema se debe aparentemente al cambio de los limites de la pantalla, que la collection toma como referencia, y que sobreescribiendo un método del delegate llamado invalidateLayout se solucionaba. Sin embargo, este método no pude encontrarlo para sobreescribirlo en mi extension que implementaba UICollectionViewDelegateFlowLayout. TL;DR: Para evitar problemas, me fije como maneja Netflix su pantalla principal, y ví que no permiten el cambio de Portrait a Landscape, asi que decidí seguir el mismo patrón que ellos.
+
+-   Para los dos tipos posibles de tipo de carousel, decidi utilizar dos componentes UICollectionViewCell distintos. Si bien su codigo es prácticamente idéntico y se podría haber utilizado un sólo compenente, me pareció más práctico y sencillo de actualizar a futuro utilizar dos.
+
+-   Para reproducir el video, utilice la clase AVPlayerViewController debido a su sencillez. Podría haber construido un reproductor customizado recurriendo a la clase AVPlayerItem pero era una solución mas costosa en cuanto al tiempo de desarrollo.

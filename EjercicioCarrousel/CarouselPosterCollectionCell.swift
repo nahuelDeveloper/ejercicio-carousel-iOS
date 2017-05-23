@@ -10,6 +10,7 @@ import UIKit
 
 final class CarouselPosterCollectionCell: UICollectionViewCell {
     
+    // MARK: - Outlets -
     @IBOutlet weak var posterImageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     

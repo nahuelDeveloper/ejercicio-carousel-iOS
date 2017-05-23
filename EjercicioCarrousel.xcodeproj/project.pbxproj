@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		68C318B0F935F0A35F666EED /* Pods_EjercicioCarrousel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CBA4055A23F1014F6C31EF9 /* Pods_EjercicioCarrousel.framework */; };
 		7F45EC7F1ED460DE00BA9EC6 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F45EC7E1ED460DE00BA9EC6 /* UIViewController+Extension.swift */; };
+		7F45EC831ED4716600BA9EC6 /* comentarios in Resources */ = {isa = PBXBuildFile; fileRef = 7F45EC821ED4716600BA9EC6 /* comentarios */; };
 		7F8A7E951ED305C0003882E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F8A7E941ED305C0003882E8 /* AppDelegate.swift */; };
 		7F8A7E971ED305C0003882E8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F8A7E961ED305C0003882E8 /* ViewController.swift */; };
 		7F8A7E9A1ED305C0003882E8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F8A7E981ED305C0003882E8 /* Main.storyboard */; };
@@ -32,6 +33,7 @@
 		2F9E1F175580C5D9B6375C98 /* Pods-EjercicioCarrousel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EjercicioCarrousel.release.xcconfig"; path = "Pods/Target Support Files/Pods-EjercicioCarrousel/Pods-EjercicioCarrousel.release.xcconfig"; sourceTree = "<group>"; };
 		3CBA4055A23F1014F6C31EF9 /* Pods_EjercicioCarrousel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EjercicioCarrousel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F45EC7E1ED460DE00BA9EC6 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		7F45EC821ED4716600BA9EC6 /* comentarios */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = comentarios; sourceTree = "<group>"; };
 		7F8A7E911ED305C0003882E8 /* EjercicioCarrousel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EjercicioCarrousel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F8A7E941ED305C0003882E8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7F8A7E961ED305C0003882E8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				7F8A7EA61ED30E4E003882E8 /* carousel.json */,
+				7F45EC821ED4716600BA9EC6 /* comentarios */,
 				7F8A7E931ED305C0003882E8 /* EjercicioCarrousel */,
 				7F8A7E921ED305C0003882E8 /* Products */,
 				10AFAE5FD4E6DC2C03D85168 /* Pods */,
@@ -229,6 +232,7 @@
 				7F8A7E9A1ED305C0003882E8 /* Main.storyboard in Resources */,
 				7F8A7EBC1ED32206003882E8 /* CarouselPosterCollectionCell.xib in Resources */,
 				7F8A7EA71ED30E4E003882E8 /* carousel.json in Resources */,
+				7F45EC831ED4716600BA9EC6 /* comentarios in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
