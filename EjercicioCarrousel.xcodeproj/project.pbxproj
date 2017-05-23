@@ -10,6 +10,7 @@
 		68C318B0F935F0A35F666EED /* Pods_EjercicioCarrousel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CBA4055A23F1014F6C31EF9 /* Pods_EjercicioCarrousel.framework */; };
 		7F45EC7F1ED460DE00BA9EC6 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F45EC7E1ED460DE00BA9EC6 /* UIViewController+Extension.swift */; };
 		7F45EC831ED4716600BA9EC6 /* comentarios in Resources */ = {isa = PBXBuildFile; fileRef = 7F45EC821ED4716600BA9EC6 /* comentarios */; };
+		7F5CC91C1ED4805600442FA7 /* ConnectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5CC91B1ED4805600442FA7 /* ConnectionManager.swift */; };
 		7F8A7E951ED305C0003882E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F8A7E941ED305C0003882E8 /* AppDelegate.swift */; };
 		7F8A7E971ED305C0003882E8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F8A7E961ED305C0003882E8 /* ViewController.swift */; };
 		7F8A7E9A1ED305C0003882E8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F8A7E981ED305C0003882E8 /* Main.storyboard */; };
@@ -34,6 +35,7 @@
 		3CBA4055A23F1014F6C31EF9 /* Pods_EjercicioCarrousel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EjercicioCarrousel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F45EC7E1ED460DE00BA9EC6 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		7F45EC821ED4716600BA9EC6 /* comentarios */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = comentarios; sourceTree = "<group>"; };
+		7F5CC91B1ED4805600442FA7 /* ConnectionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionManager.swift; sourceTree = "<group>"; };
 		7F8A7E911ED305C0003882E8 /* EjercicioCarrousel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EjercicioCarrousel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F8A7E941ED305C0003882E8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7F8A7E961ED305C0003882E8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -85,6 +87,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		7F5CC91A1ED4803400442FA7 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				7F5CC91B1ED4805600442FA7 /* ConnectionManager.swift */,
+			);
+			name = Managers;
+			sourceTree = "<group>";
+		};
 		7F8A7E881ED305C0003882E8 = {
 			isa = PBXGroup;
 			children = (
@@ -133,6 +143,7 @@
 		7F8A7EB11ED31C23003882E8 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				7F5CC91A1ED4803400442FA7 /* Managers */,
 				7F8A7EB21ED31C30003882E8 /* Extensions */,
 			);
 			name = Utils;
@@ -292,6 +303,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7FD25D4B1ED383CA00F96E19 /* UIImageView+Extension.swift in Sources */,
+				7F5CC91C1ED4805600442FA7 /* ConnectionManager.swift in Sources */,
 				7F45EC7F1ED460DE00BA9EC6 /* UIViewController+Extension.swift in Sources */,
 				7F8A7EB01ED31BF8003882E8 /* CarouselTableCell.swift in Sources */,
 				7F8A7EB41ED31CB8003882E8 /* UITableViewCell+Extension.swift in Sources */,

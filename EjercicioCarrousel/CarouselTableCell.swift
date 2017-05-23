@@ -23,6 +23,10 @@ final class CarouselTableCell: UITableViewCell {
     // MARK: - Outlets -
     @IBOutlet weak var collectionView: UICollectionView!
     
+    // MARK: - Constants
+    static let defaultPosterCellHeight: CGFloat = CGFloat(205.0)
+    static let defaultThumbCellHeight: CGFloat = CGFloat(100.0)
+    
     // MARK: - Attributes -
     var carousel: Carousel!
     var collectionCellType: CarouselCollectionCellType!
@@ -78,14 +82,13 @@ extension CarouselTableCell: UICollectionViewDataSource, UICollectionViewDelegat
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         if carousel.type == CarouselCollectionCellType.poster.rawValue {
-            return CGSize(width: 150.0, height: 200.0)
+            return CarouselPosterCollectionCell.defaultSize
         } else {
-            return CGSize(width: 200.0, height: 90.0)
+            return CarouselThumbCollectionCell.defaultSize
         }
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return UIEdgeInsetsMake(2.5, 5.0, 2.5, 5.0)
     }
-    
 }

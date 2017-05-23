@@ -40,21 +40,18 @@ class ViewController: UIViewController {
     
     private func getCarouselsData() {
         
-        guard let overlayFileURLString = Bundle.main.path(forResource: "carousel", ofType: "json") else {
-            return
-        }
-        
-        let overlayFileURL = URL(fileURLWithPath: overlayFileURLString)
-        
-        let data = try! Data(contentsOf: overlayFileURL)
-        let object = try! JSONSerialization.jsonObject(with: data, options: .allowFragments)
-        
-        if let arrayJson = object as? [[String: Any]] {
-            for carouselJson in arrayJson {
-                carousels.append(Carousel(json: carouselJson))
+        ConnectionManager.sharedInstance.getCarrouselData { (carousels, error) in
+            
+            if let err = error {
+                // According to the API failure, the appropriate error message must be shown
+                self.showAlert(err.getErrorDescription())
+                return
             }
-        } else {
-            fatalError("Invalid JSON")
+            
+            if let _carousels = carousels {
+                self.carousels = _carousels
+                self.tableView.reloadData()
+            }
         }
     }
 }
@@ -77,9 +74,9 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         let carousel = carousels[indexPath.row]
         
         if carousel.type == CarouselCollectionCellType.poster.rawValue {
-            return 205.0
+            return CarouselTableCell.defaultPosterCellHeight
         } else {
-            return 100.0
+            return CarouselTableCell.defaultThumbCellHeight
         }
     }
 }

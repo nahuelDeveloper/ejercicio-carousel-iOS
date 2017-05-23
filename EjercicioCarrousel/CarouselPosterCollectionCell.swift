@@ -14,6 +14,8 @@ final class CarouselPosterCollectionCell: UICollectionViewCell {
     @IBOutlet weak var posterImageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     
+    static let defaultSize: CGSize = CGSize(width: 150.0, height: 200.0)
+    
     func configure(with carouselItem: CarouselItem) {
         titleLabel.text = carouselItem.title
         posterImageView.loadImageFromResource(resource: carouselItem.URL)

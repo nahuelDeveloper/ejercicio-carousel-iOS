@@ -14,6 +14,8 @@ final class CarouselThumbCollectionCell: UICollectionViewCell {
     @IBOutlet weak var thumbImageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     
+    static let defaultSize: CGSize = CGSize(width: 200.0, height: 90.0)
+    
     func configure(with carouselItem: CarouselItem) {
         titleLabel.text = carouselItem.title
         thumbImageView.loadImageFromResource(resource: carouselItem.URL)
