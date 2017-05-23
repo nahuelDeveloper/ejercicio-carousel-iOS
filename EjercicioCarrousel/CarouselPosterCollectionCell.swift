@@ -16,6 +16,14 @@ final class CarouselPosterCollectionCell: UICollectionViewCell {
     func configure(with carouselItem: CarouselItem) {
         titleLabel.text = carouselItem.title
         posterImageView.loadImageFromResource(resource: carouselItem.URL)
+        
+        if !carouselItem.isVideoAvailable {
+            self.contentView.layer.borderWidth = 1.0
+            self.contentView.layer.borderColor = UIColor.red.cgColor
+        } else {
+            self.contentView.layer.borderWidth = 1.0
+            self.contentView.layer.borderColor = UIColor.green.cgColor
+        }
     }
     
 }

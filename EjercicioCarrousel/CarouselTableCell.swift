@@ -13,6 +13,11 @@ enum CarouselCollectionCellType: String {
     case poster = "poster"
 }
 
+protocol CarouselTableCellDelegate: class {
+    func displayNoVideoMessage()
+    func playVideo(for carouselItem: CarouselItem)
+}
+
 final class CarouselTableCell: UITableViewCell {
     
     // MARK: - Outlets -
@@ -21,6 +26,9 @@ final class CarouselTableCell: UITableViewCell {
     // MARK: - Attributes -
     var carousel: Carousel!
     var collectionCellType: CarouselCollectionCellType!
+    
+    // MARK: - Delegate -
+    weak var delegate: CarouselTableCellDelegate?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -52,9 +60,19 @@ extension CarouselTableCell: UICollectionViewDataSource, UICollectionViewDelegat
             
         } else {
             // Thumb
-            let cell = collectionView.dequeueReusableCellUICollectionViewCell(forIndexPath: indexPath) as CarouselPosterCollectionCell
+            let cell = collectionView.dequeueReusableCellUICollectionViewCell(forIndexPath: indexPath) as CarouselThumbCollectionCell
             cell.configure(with: carousel.items[indexPath.row])
             return cell
+        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let carouselItem = carousel.items[indexPath.row]
+        
+        if carouselItem.isVideoAvailable {
+            delegate?.playVideo(for: carouselItem)
+        } else {
+            delegate?.displayNoVideoMessage()
         }
     }
     
@@ -67,6 +85,7 @@ extension CarouselTableCell: UICollectionViewDataSource, UICollectionViewDelegat
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsetsMake(2.5, 2.5, 2.5, 2.5)
+        return UIEdgeInsetsMake(2.5, 5.0, 2.5, 5.0)
     }
+    
 }

@@ -14,6 +14,15 @@ struct CarouselItem {
     var URL     : String
     var video   : String
     
+    var isVideoAvailable: Bool {
+        get {
+            if video.characters.count == 0 {
+                return false
+            }
+            return true
+        }
+    }
+    
     init(json: [String: Any]) {
         
         if let _title = json["title"] as? String {

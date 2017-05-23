@@ -54,16 +54,12 @@ class ViewController: UIViewController {
                 carousels.append(Carousel(json: carouselJson))
             }
         } else {
-            print("Invalid JSON")
-        }
-        
-        for carousel in carousels {
-            print("Tengo \(carousel.items.count) items en el carousel")
+            fatalError("Invalid JSON")
         }
     }
-
 }
 
+// MARK: - UITableViewDataSource & UITableViewDelegate -
 extension ViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -73,6 +69,7 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellUITableViewCell(forIndexPath: indexPath) as CarouselTableCell
         cell.configureWithCarousel(carousel: carousels[indexPath.row])
+        cell.delegate = self
         return cell
     }
     
@@ -80,9 +77,21 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         let carousel = carousels[indexPath.row]
         
         if carousel.type == CarouselCollectionCellType.poster.rawValue {
-            return 200.0
+            return 205.0
         } else {
             return 100.0
         }
+    }
+}
+
+// MARK: - CarouselTableCellDelegate -
+extension ViewController: CarouselTableCellDelegate {
+    
+    func displayNoVideoMessage() {
+        self.showAlert("Video no disponible")
+    }
+    
+    func playVideo(for carouselItem: CarouselItem) {
+        self.displayVideo(fromURL: carouselItem.video)
     }
 }
